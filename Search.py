@@ -22,8 +22,6 @@ class Search:
         cells = soup.find_all("a", {"data-favorite-house-id": re.compile(".*")})
         if len(cells) < 1:
             return None
-        else:
-            print("<found {} link>".format(len(cells)))
         house_id = cells[0]["data-favorite-house-id"]
         return house_id
 
@@ -76,7 +74,6 @@ class Search:
             "floor_type": floor_type,
             "wall_material": wall_material,
         }
-        print(data)
         return data
 
     def scrape_data(self, id):

@@ -28,7 +28,7 @@ def process():
                 result = search.basic(search_string)
                 query.is_searched = True
                 if result is None:
-                    print("not found")
+                    print("<not found>")
                 else:
                     # binding the request id to the result
                     d = {"request_id": query.id} | result
