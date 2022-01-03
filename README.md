@@ -5,22 +5,23 @@
 https://docs.docker.com/compose/install/
 https://docs.docker.com/get-docker/
 
-2) Склонируйте репозиторий с помощью команды: git clone https://github.com/artpheon/search_sov.git
+2) Склонируйте репозиторий с помощью команды:
+- git clone https://github.com/artpheon/search_sov.git
 
 3) Установить зависиости в виртуальную среду для работы поиска, и активировать виртуальную среду:
-python3 -m venv /path/to/new/virtual/environment
-source ./env/bin/activate # Linux
-env\Scripts\activate.bat # Windows
+- python3 -m venv /path/to/new/virtual/environment
+- source ./env/bin/activate # Linux
+- env\Scripts\activate.bat # Windows
 
 *Если вы используете Linux, необходимо запустить Docker с помощью: sudo systemctl start docker
 
 4) Сейчас необходимо установить базу данных в Docker-контейнер, для этого перейдите в каталог склонированного репозитория и выполните команду:
-sudo docker-compose up
+- sudo docker-compose up
 
 Таким образом, мы запустили базу данных PostgreSQL в Docker-контейнере. Следующие команды необходимо выполнить в другом окне терминала.
 
 5) Для демонстрации работы поиска будет использоваться тестовая выборка из папки 'src'. При активированной виртуальной среде необходимо выполнить следующую команду (можно запустить в фоне):
-python main.py
+- python main.py
 
 6) Для получения статистики по БД, можно выполнить следующие команды:
 - python scripts.py 1 # количество найденных и не найденных объектов
